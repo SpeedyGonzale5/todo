@@ -7,7 +7,7 @@ import FormTodo from "../FormTodo";
 export default function TodoApp() {
   const [todos, setTodos] = React.useState([
     {
-      text: "This is a sample todo",
+      text: "Go on a walk",
       isDone: false,
     },
   ]);
