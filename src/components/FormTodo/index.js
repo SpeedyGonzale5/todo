@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AddTodo from "../TodoItem/addTodo.js";
 
-export default function FormTodo({ addTodo }) {
-  const [value, setValue] = React.useState("");
+export default function FormTodo({ todos, setTodos }) {
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
-    addTodo(value);
+    AddTodo(value, todos, setTodos);
     setValue("");
   };
 

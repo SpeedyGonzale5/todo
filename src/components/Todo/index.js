@@ -1,17 +1,24 @@
 import { Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-export default function Todo({ todo, index, markTodo, removeTodo }) {
+import MarkTodo from "../TodoItem/markTodo";
+import RemoveTodo from "../TodoItem/removeTodo";
+export default function Todo({ todo, index, todos, setTodos }) {
   return (
     <div className="todo">
       <span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>
         {todo.text}
       </span>
       <div>
-        <Button variant="success" onClick={() => markTodo(index)}>
+        <Button
+          variant="success"
+          onClick={() => MarkTodo(index, todos, setTodos)}
+        >
           ✓
         </Button>{" "}
-        <Button variant="danger" onClick={() => removeTodo(index)}>
+        <Button
+          variant="danger"
+          onClick={() => RemoveTodo(index, todos, setTodos)}
+        >
           ✕
         </Button>
       </div>
