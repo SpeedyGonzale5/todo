@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import AddTodo from "../TodoItem/addTodo.js";
+import AddTodo from "../AddTodo/addTodo.js";
 
 export default function FormTodo({ todos, setTodos }) {
   const [value, setValue] = useState("");
