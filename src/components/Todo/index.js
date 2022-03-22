@@ -1,6 +1,6 @@
 import { Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MarkTodo from "../TodoItem/markTodo";
+import MarkTodo from "../MarkTodo/markTodo";
 import RemoveTodo from "../TodoItem/removeTodo";
 export default function Todo({ todo, index, todos, setTodos }) {
   return (
